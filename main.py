@@ -3,8 +3,11 @@ import time
 from datetime import datetime
 import telebot
 from telebot import types
+import os
+from dotenv import load_dotenv
 
-token='7044459383:AAGE-K-UOkT-gZocdJ6tXGb4rk7VNYpH4BM'
+load_dotenv()
+token=os.getenv('TOKEN') #чтобы не искать потом 7044459383:AAGE-K-UOkT-gZocdJ6tXGb4rk7VNYpH4BM
 bot=telebot.TeleBot(token)
 
 def default_markup():
